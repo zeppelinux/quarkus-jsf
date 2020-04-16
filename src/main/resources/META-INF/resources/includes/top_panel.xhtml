@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+>
+<ui:composition>
+    <h:form id="topForm">
+        <p:sidebar widgetVar="topBar" position="top">
+            <p:outputPanel id="_topBar">
+                <p:panel>
+                    <p:panelGrid columns="1">
+                        <p:commandLink update="growl, gridsForm:_gridsBar" oncomplete="PF('gridsBar').show()">
+                            <h:outputText value="Show Right Panel"/>
+                        </p:commandLink>
+                    </p:panelGrid>
+                </p:panel>
+            </p:outputPanel>
+        </p:sidebar>
+    </h:form>
+</ui:composition>
+</html>

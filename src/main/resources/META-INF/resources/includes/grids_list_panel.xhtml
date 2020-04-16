@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+>
+<ui:composition>
+    <h:form id="gridsForm">
+        <p:sidebar widgetVar="gridsBar" position="right">
+            <p:outputPanel id="_gridsBar">
+                <p:dataList value="#{listController.callMe()}" var="_item" type="ordered">
+                    <h:outputText value="#{_item}"/>
+                </p:dataList>
+            </p:outputPanel>
+        </p:sidebar>
+    </h:form>
+</ui:composition>
+</html>
